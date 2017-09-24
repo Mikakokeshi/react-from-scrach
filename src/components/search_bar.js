@@ -5,9 +5,8 @@ import React, { Component } from 'react'
 // It gives our search bar a bunch of functionality from the React.Component class
 class SearchBar extends Component {
   render() {
-    return <input />;
+    return <input onChange={event => console.log(event.target.value)} />;
   }
-
 }
 
 
