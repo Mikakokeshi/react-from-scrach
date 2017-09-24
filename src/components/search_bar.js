@@ -10,10 +10,14 @@ class SearchBar extends Component {
     this.state = { term: ""};
     }
 
+    /**value only ever changes when the state changes**/
+       /**input became control component by using the value**/
   render() {
     return(
       <div>
-        <input onChange={event => this.setState({ term: event.target.value })} />
+        <input
+        value={this.state.term}
+        onChange={event => this.setState({ term: event.target.value })} />
       </div>
     );
   }
