@@ -1,8 +1,13 @@
 import React from 'react'
 
 const VideoDetail = ({video}) => {
-  const = videoId = video.id.videoId;
-  const = url ='https://www.youtube.com/embed/${videoId}';
+  if(!video){
+    return<div>Loading...</div>;
+  }
+
+  const videoId = video.id.videoId;
+  const url ='https://www.youtube.com/embed/${videoId}';
+  //  or 'https://www.youtube.com/embed/' +　videoId;
 
   return (
     <div className="video-detail col-md-8">
@@ -10,8 +15,9 @@ const VideoDetail = ({video}) => {
         <iframe className="embed-responsive-item" src={url}></iframe>
       </div>
        <div className="details">
-       <div>{video.snippet.title}</div>
-       <div>{video.snippet.discription}</div>
+        <div>{video.snippet.title}</div>
+        <div>{video.snippet.discription}</div>
+      </div>
     </div>
   );
 };
