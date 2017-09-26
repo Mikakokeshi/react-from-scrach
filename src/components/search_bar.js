@@ -7,6 +7,7 @@ class SearchBar extends Component {
   constructor(props){
     super(props);
 
+    // steteの値を初期化　&　term に代入
     this.state = { term: ""};
     }
 
